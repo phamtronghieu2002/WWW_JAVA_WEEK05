@@ -35,7 +35,7 @@ public class AddressController {
         return "address/addresses";
     }
 
-    @GetMapping("/candidates")
+    @GetMapping("/addresses")
     public String showCandidateListPaging(Model model,
                                           @RequestParam("page") Optional<Integer> page,
                                           @RequestParam("size") Optional<Integer> size) {

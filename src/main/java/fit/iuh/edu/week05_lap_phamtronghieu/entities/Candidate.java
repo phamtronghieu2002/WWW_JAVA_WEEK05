@@ -47,5 +47,71 @@ public class Candidate {
         this.experiences = experiences;
     }
 
+    public Candidate(long id) {
+        this.id = id;
+    }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public LocalDate getDod() {
+        return dod;
+    }
+
+    public void setDod(LocalDate dod) {
+        this.dod = dod;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public List<Experience> getExperiences() {
+        return experiences;
+    }
+
+    public void setExperiences(List<Experience> experiences) {
+        this.experiences = experiences;
+    }
+
+    public List<CandidateSkill> getCandidateSkills() {
+        return candidateSkills;
+    }
+
+    public void setCandidateSkills(List<CandidateSkill> candidateSkills) {
+        this.candidateSkills = candidateSkills;
+    }
 }

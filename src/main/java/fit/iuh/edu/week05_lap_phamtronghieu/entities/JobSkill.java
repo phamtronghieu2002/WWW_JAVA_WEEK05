@@ -13,9 +13,6 @@ import lombok.NoArgsConstructor;
 @Table(name="job_skill")
 @IdClass(value = JobSkillID.class)
 @NoArgsConstructor
-@AllArgsConstructor
-@Data
-
 public class JobSkill {
 
     @Id
@@ -37,7 +34,52 @@ public class JobSkill {
     @Column(name = "more_infos")
     private String moreInfor;
 
+    public JobSkill(Skill skill) {
+        this.skill = skill;
+    }
 
+    public JobSkill(Skill skill, SkillLevel skllLevel, String moreInfor) {
+        this.skill = skill;
+        SkllLevel = skllLevel;
+        this.moreInfor = moreInfor;
+    }
 
+    public JobSkill(Job job, Skill skill, SkillLevel skllLevel, String moreInfor) {
+        this.job = job;
+        this.skill = skill;
+        SkllLevel = skllLevel;
+        this.moreInfor = moreInfor;
+    }
 
+    public Job getJob() {
+        return job;
+    }
+
+    public void setJob(Job job) {
+        this.job = job;
+    }
+
+    public Skill getSkill() {
+        return skill;
+    }
+
+    public void setSkill(Skill skill) {
+        this.skill = skill;
+    }
+
+    public SkillLevel getSkllLevel() {
+        return SkllLevel;
+    }
+
+    public void setSkllLevel(SkillLevel skllLevel) {
+        SkllLevel = skllLevel;
+    }
+
+    public String getMoreInfor() {
+        return moreInfor;
+    }
+
+    public void setMoreInfor(String moreInfor) {
+        this.moreInfor = moreInfor;
+    }
 }
